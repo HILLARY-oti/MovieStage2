@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="20dp"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutRV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/authorTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Author : "
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:id="@+id/authorNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/authorTv"
+                android:textColor="#f35"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/authorTv" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/authorTv"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/authorTv"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp">
+
+                <TextView
+                    android:id="@+id/contentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f35"
+                    android:layout_alignParentTop="true"
+                    tools:text="Author : "
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp" />
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.core.widget.NestedScrollView>

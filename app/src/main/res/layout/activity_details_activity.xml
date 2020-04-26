@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingEnd="18dp"
+    android:id="@+id/s"
+    android:scrollbarStyle="outsideInset"
+    android:background="@color/colorPrimary"
+    android:paddingStart="18dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:contentDescription="Movie Poster"
+            android:adjustViewBounds="false"
+            android:src="@drawable/poster" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Blood Shot"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:id="@+id/rating_thumbs"
+            android:layout_width="18sp"
+            android:layout_height="28dp"
+            android:layout_toRightOf="@id/rating_value"
+            android:src="@drawable/download" />
+
+        <TextView
+            android:id="@+id/rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_toLeftOf="@id/rating_thumbs"
+            android:text="5.7" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/release_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Release Date: "/>
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_toRightOf="@id/release_head"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_height="wrap_content"
+                android:text="20 February 2020"
+                tools:ignore="UnknownId" />
+
+            <TextView
+                android:id="@+id/rating_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/release_head"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:contentDescription="favorite_icon_image"
+                android:layout_width="50dp"
+                android:layout_height="29dp"
+                android:background="@drawable/star"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="29dp" />
+
+            <TextView
+                android:id="@+id/t"
+                android:layout_toRightOf="@id/favoriteIcon"
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp"
+                android:text="Add to favorite" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Synopsis"/>
+
+        <TextView
+            android:id="@+id/synopsis_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Based on the bestselling comic book, Vin Diesel stars as Ray Garrison, a soldier recently killed in action and brought back to life as the superhero Bloodshot by the RST corporation. With an army of nanotechnology in his veins, he's an unstoppable force -stronger than ever and able to heal instantly. But in controlling his body, the company has sway over his mind and memories, too. Now, Ray doesn't know what's real and what's not - but he's on a mission to find out."/>
+
+
+        <TextView
+            android:id="@+id/tVTrailer"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trailers" />
+
+        <LinearLayout
+            android:id="@+id/trailerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trailerRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tVReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Reviews" />
+
+        <LinearLayout
+            android:id="@+id/reviewsLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewsRV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
