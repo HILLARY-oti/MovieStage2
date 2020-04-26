@@ -1,7 +1,7 @@
 package Util;
 
 public final class Network {
-    public static final String API_KEY = ""; //TODO add api key
+    public static final String API_KEY = ""; //TODO add api key here
     public static boolean FAV = false;
     public static final String BASE_URL_MOVIE = "https://api.themoviedb.org/3/discover/movie?api_key=";
     public static final String POPULAR_MOVIES_URL = "https://api.themoviedb.org/3/movie/popular?api_key=";
